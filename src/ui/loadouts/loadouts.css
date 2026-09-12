@@ -1,0 +1,61 @@
+.loadouts-screen.screen { display: block; overflow-y: auto; background: radial-gradient(ellipse at 85% 0, #40152266, transparent 55%), #090b13f5; padding: 30px; }
+.loadouts-wrap { max-width: 1500px; margin: auto; color: #f1f0ed; }
+.loadouts-screen button, .loadouts-screen input { font: inherit; }
+.loadouts-screen button { padding: 12px 16px; color: #f1f0ed; background: #171924; border: 1px solid #ffffff30; cursor: pointer; }
+.loadouts-screen button:hover:not(:disabled) { border-color: #ff3547; background: #3c1823; }
+.loadouts-screen button:focus-visible, .loadouts-screen input:focus-visible { outline: 2px solid #ff6674; outline-offset: 3px; }
+.loadouts-screen button:disabled { opacity: .4; cursor: default; }
+.loadouts-header { display: flex; align-items: center; gap: 22px; }
+.loadouts-header > img { width: 86px; height: 104px; object-fit: cover; border: 1px solid #ff3547; }
+.loadouts-header small { color: #ff6674; letter-spacing: 2px; }
+.loadouts-header h1 { font-size: clamp(25px, 3vw, 42px); margin: 8px 0; font-style: italic; }
+.loadouts-header p, .loadout-hint { color: #aaaaba; font-size: 13px; }
+.loadouts-rules { display: flex; gap: 35px; padding: 20px 0; margin-bottom: 12px; border-bottom: 1px solid #ffffff20; color: #aaaaba; }
+.loadouts-rules b { color: #fff; }
+.loadouts-layout { display: grid; grid-template-columns: 255px minmax(0, 1fr); gap: 30px; }
+.loadout-slots { display: flex; flex-direction: column; gap: 7px; align-self: start; }
+.loadout-slots button { display: flex; gap: 16px; text-align: left; align-items: center; min-height: 65px; }
+.loadout-slots button[aria-pressed=true] { border-color: #ff3547; background: #35131e; }
+.slot-number { color: #ff6674; font-size: 20px; }
+.loadout-slots b { display: block; overflow-wrap: anywhere; }
+.loadout-slots small { display: block; color: #9999a8; font-size: 9px; letter-spacing: 1px; margin-top: 5px; }
+.loadout-content { min-width: 0; }
+.loadout-title { display: flex; align-items: center; justify-content: space-between; gap: 14px; margin-bottom: 20px; }
+.loadout-title h2 { margin: 10px 0; overflow-wrap: anywhere; }
+.loadout-title label { font-size: 12px; color: #b8b8c8; flex: 1; max-width: 400px; }
+.loadout-title input { display: block; width: 100%; box-sizing: border-box; background: #151720; border: 1px solid #ffffff40; padding: 12px; margin-top: 5px; color: white; }
+#loadout-points { color: #ff7d89; font-size: 13px; }
+.loadout-badge { color: #9abbaf; font-size: 11px; letter-spacing: 1px; }
+.loadout-five { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 10px; }
+.loadout-card { background: linear-gradient(145deg, #282333, #10121b); border: 1px solid #63515f; padding: 15px 12px; min-height: 225px; display: flex; flex-direction: column; }
+.loadout-card > small { color: #ff7d89; letter-spacing: 2px; font-size: 10px; }
+.loadout-card h3 { font-size: 16px; margin: 18px 0 10px; }
+.loadout-card p { color: #c3bfcc; font-size: 12px; line-height: 1.6; flex: 1; }
+.card-level-pips { display: flex; gap: 4px; margin: 15px 0; }
+.card-level-pips i { height: 5px; flex: 1; background: #42414c; }
+.card-level-pips i.on { background: #ff3547; }
+.card-level-controls { display: flex; align-items: center; justify-content: space-between; }
+.card-level-controls button { padding: 5px 10px; font-size: 20px; }
+.loadouts-screen .card-remove { background: transparent; border: 0; color: #aea7b7; font-size: 10px; padding: 14px 0 0; }
+.loadout-card.empty { justify-content: center; align-items: center; border-style: dashed; color: #6d6979; font-size: 30px; }
+.loadout-card.empty small { margin-top: 12px; color: #8d8897; letter-spacing: 0; text-align: center; }
+.loadout-editor-actions { display: flex; justify-content: flex-end; gap: 10px; margin-top: 18px; }
+.loadouts-screen .loadout-primary { background: #781727; border-color: #ff3547; font-weight: bold; }
+.loadout-pool-title { margin-top: 30px; font-size: 16px; }
+.loadout-pool-title span { font-size: 10px; color: #aaa; margin-left: 12px; }
+.loadout-pool { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 9px; }
+.loadout-pool button { text-align: left; display: flex; flex-direction: column; gap: 10px; min-height: 145px; }
+.loadout-pool small { color: #ff7d89; font-size: 9px; }
+.loadout-pool b { font-size: 13px; }
+.loadout-pool span { font-size: 11px; line-height: 1.5; color: #bcb8c6; }
+.loadout-pool .picked { border-color: #a35360; }
+.loadout-empty { border: 1px dashed #ffffff30; padding: 70px 35px; color: #aaaaba; line-height: 1.7; text-align: center; }
+#loadout-message { color: #d8b1bc; font-size: 13px; min-height: 22px; }
+.loadouts-footer { display: flex; align-items: center; justify-content: space-between; gap: 15px; padding: 20px 0; margin-top: 25px; border-top: 1px solid #ffffff20; }
+.loadouts-footer > span { font-size: 11px; color: #9290a1; }
+@media (max-width: 1100px) { .loadouts-layout { grid-template-columns: 190px minmax(0, 1fr); gap: 18px; } .loadout-five { grid-template-columns: repeat(3, minmax(0, 1fr)); } .loadout-pool { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (max-width: 700px) { .loadouts-screen.screen { padding: 20px 14px; } .loadouts-header > img { width: 55px; height: 75px; } .loadouts-header { gap: 12px; } .loadouts-header small { font-size: 9px; } .loadouts-header h1 { font-size: 24px; } .loadouts-rules { gap: 14px; font-size: 11px; } .loadouts-layout { display: block; } .loadout-slots { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); margin-bottom: 25px; } .loadout-slots button { padding: 8px; gap: 5px; font-size: 10px; } .slot-number { font-size: 13px; } .loadout-slots small { font-size: 7px; } .loadout-title { flex-wrap: wrap; } .loadout-five, .loadout-pool { grid-template-columns: repeat(2, minmax(0, 1fr)); } .loadouts-footer { flex-wrap: wrap; } .loadouts-footer > span { order: 3; flex-basis: 100%; } .loadouts-footer button { padding: 12px 8px; font-size: 11px; } }
+
+.loadout-pool button:disabled { opacity: .75; }
+.loadouts-footer { position: sticky; bottom: -30px; z-index: 2; background: #090b13f5; }
+@media (max-width: 700px) { .loadouts-footer { bottom: -20px; } }

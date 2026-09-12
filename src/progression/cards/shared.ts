@@ -1,0 +1,30 @@
+import type { CardDef } from '../../core/types';
+
+/** Cartas que podem ser oferecidas a mais de um personagem. */
+export const sharedCards: Record<string, CardDef> = {
+  c_vigor:     { id: "c_vigor",     name: "Vigor Ancestral",     category: "Health",   description: "+15% vida máxima.",                      mods: { maxHp: 0.15 } },
+  c_regen:     { id: "c_regen",     name: "Regeneração do Ki",   category: "Health",   description: "+3 de vida por segundo.",                mods: { hpRegen: 3 } },
+  c_armor:     { id: "c_armor",     name: "Armadura do Oni",     category: "Defense",  description: "+10% resistência a dano.",                mods: { dmgResist: 0.10 } },
+  c_lowhp:     { id: "c_lowhp",     name: "Fúria do Ronin",      category: "Offense",  description: "+12% dano quando abaixo de 40% de vida.",  mods: { lowHpDamage: 0.12 } },
+  c_defshield: { id: "c_defshield", name: "Armadura Espiritual", category: "Defense",  description: "+100 de escudo ao usar habilidade defensiva.", mods: { defensiveShield: 100 } },
+  c_wind:      { id: "c_wind",      name: "Passos do Vento",     category: "Mobility", description: "+15% velocidade de movimento.",            mods: { moveSpeed: 0.15 } },
+  c_jump:      { id: "c_jump",      name: "Salto do Tengu",      category: "Mobility", description: "+20% altura de pulo.",                     mods: { jumpPower: 0.20 } },
+  c_damage:    { id: "c_damage",    name: "Gume Espiritual",     category: "Offense",  description: "+10% dano causado.",                      mods: { damageMult: 0.10 } },
+  c_headshot:  { id: "c_headshot",  name: "Mira do Mestre",      category: "Offense",  description: "+25% dano de acerto crítico (headshot).",   mods: { headshotMult: 0.25 } },
+  c_ammo:      { id: "c_ammo",      name: "Carregador Ampliado", category: "Offense",  description: "+30% munição.",                            mods: { ammoMult: 0.30 } },
+  c_reload:    { id: "c_reload",    name: "Recarga do Artesão",  category: "Offense",  description: "-15% tempo de recarga.",                   mods: { reloadMult: -0.15 } },
+  c_projspeed: { id: "c_projspeed", name: "Projéteis Velozes",   category: "Offense",  description: "+20% velocidade de projéteis.",            mods: { projSpeed: 0.20 } },
+  c_spread:    { id: "c_spread",    name: "Pontaria Calma",      category: "Offense",  description: "-15% dispersão da arma.",                 mods: { spreadMult: -0.15 } },
+  c_lifesteal: { id: "c_lifesteal", name: "Dreno do Yokai",      category: "Offense",  description: "+5% roubo de vida (dano cura você).",       mods: { lifesteal: 0.05 } },
+  c_melee:     { id: "c_melee",     name: "Treino do Dojo",      category: "Offense",  description: "+20% dano corpo a corpo.",                mods: { meleeDamageMult: 0.20 } },
+  c_cooldown:  { id: "c_cooldown",  name: "Fluxo de Ki",         category: "Ability",  description: "-15% recarga das habilidades.",           mods: { cooldownMult: -0.15 } },
+  c_radius:    { id: "c_radius",    name: "Amplificação do Círculo", category: "Ability", description: "+15% raio das habilidades de área.",    mods: { abilityRadius: 0.15 } },
+  c_resource:  { id: "c_resource",  name: "Núcleo Espiritual",   category: "Resource", description: "+20% geração de recurso (ultimate).",      mods: { resourceGain: 0.20 } },
+  c_ultgain:   { id: "c_ultgain",   name: "Chama do Shogun",     category: "Ultimate", description: "+15% carga de ultimate.",                 mods: { ultGain: 0.15 } },
+  c_ultdmg:    { id: "c_ultdmg",    name: "Poder do Clã",        category: "Ultimate", description: "+15% dano do ultimate.",                  mods: { ultDamageMult: 0.15 } },
+  c_onkillheal:{ id: "c_onkillheal",name: "Banquete do Guerreiro", category: "Utility", description: "Cura 5% da vida máxima ao eliminar.",     mods: { onKillHeal: 0.05 } },
+  c_onkillspeed:{ id: "c_onkillspeed", name: "Caça do Ronin",    category: "Mobility", description: "+20% velocidade por 2s ao eliminar.",    mods: { onKillSpeed: 0.20, onKillSpeedDur: 2 } },
+  c_heal:      { id: "c_heal",      name: "Bênção da Miko",      category: "Support",  description: "+25% cura causada.",                      mods: { healMult: 0.25 } },
+  c_shield:    { id: "c_shield",    name: "Manto do Protetor",   category: "Defense",  description: "+10% escudo recebido ou gerado.",         mods: { shieldMult: 0.10 } },
+  c_abilitdmg: { id: "c_abilitdmg", name: "Lâmina Arcana",       category: "Ability",  description: "+20% dano das habilidades.",              mods: { abilityDamageMult: 0.20 } },
+};

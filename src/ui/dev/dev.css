@@ -1,0 +1,14 @@
+#dev-panel { position: fixed; z-index: 10000; inset: 12px 12px 12px auto; width: min(460px, calc(100vw - 24px)); overflow: auto; padding: 16px; background: #101820f5; color: #e3f4ec; border: 1px solid #69dba9; border-radius: 8px; font: 13px/1.45 monospace; pointer-events: auto; }
+#dev-panel[hidden] { display: none; }
+#dev-panel { margin: 0; max-height: none; box-sizing: border-box; }
+#dev-panel::backdrop { background: transparent; pointer-events: none; }
+#dev-panel header, #dev-panel .dev-actions { display: flex; flex-wrap: wrap; gap: 8px; justify-content: space-between; }
+#dev-panel label { display: flex; align-items: center; gap: 8px; margin: 8px 0; }
+#dev-panel fieldset { margin: 12px 0; border: 1px solid #537465; }
+#dev-panel input, #dev-panel select, #dev-panel button { font: inherit; color: #e3f4ec; background: #24392e; border: 1px solid #698f7a; padding: 5px; border-radius: 3px; max-width: 100%; min-width: 0; }
+#dev-panel select { flex: 1; }
+#dev-panel input[type=number] { width: 95px; }
+#dev-panel input[type=checkbox] { width: auto; accent-color: #69dba9; }
+#dev-panel pre { white-space: pre-wrap; overflow-wrap: anywhere; font-size: 11px; max-height: 330px; overflow: auto; }
+#dev-panel :focus-visible { outline: 2px solid #b1ffd6; outline-offset: 2px; }
+#dev-panel output { display: block; color: #ffd38a; }

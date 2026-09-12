@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LIN0 — Heroes Never Die</title>
+  <link rel="icon" href="data:," />
+  <link rel="stylesheet" href="/src/ui/styles/base.css" />
+</head>
+<body>
+  <canvas id="game-canvas"></canvas>
+
+  <!-- ============ MAIN MENU ============ -->
+  <div id="screen-menu" class="screen"></div>
+
+  <div id="training-panel" class="hidden" role="dialog" aria-modal="true" aria-labelledby="training-title">
+    <div class="training-card">
+      <p class="training-eyebrow">DOJO • TESTE LIVRE</p>
+      <h2 id="training-title">Campo de treinamento</h2>
+      <p>Quatro alvos vermelhos para dano e dois aliados azuis para cura. Alvos eliminados reaparecem em 2 segundos.</p>
+      <label for="training-hero">Personagem</label>
+      <select id="training-hero"></select>
+      <div id="training-abilities"></div>
+      <label class="training-option"><input id="training-free" type="checkbox" checked> Treino livre: vida, munição e habilidades restauradas continuamente</label>
+      <label class="training-option"><input id="training-moving" type="checkbox"> Alvos em movimento</label>
+      <label class="training-option"><input id="training-attack" type="checkbox"> Alvo próximo atira em você</label>
+      <p class="training-note">Desative o treino livre para testar dano recebido, recargas e geração de ultimate.</p>
+      <div class="training-actions">
+        <button id="training-resume" class="btn-primary">COMEÇAR A TREINAR</button>
+        <button id="training-reset" class="btn-secondary">REINICIAR ALVOS</button>
+        <button id="training-exit" class="btn-secondary">VOLTAR AO MENU</button>
+      </div>
+      <p class="training-note">T: painel · Esc: pausa · G: recuperar vida, munição, Controle e habilidades · N: reiniciar campo</p>
+    </div>
+  </div>
+  <div id="training-status" class="hidden">
+    <b>CAMPO DE TREINAMENTO</b><span id="training-metrics"></span>
+    <span>T painel · Esc pausa · G recuperar · N reiniciar · Q / RMB / F habilidades · E suprema</span>
+  </div>
+
+  <!-- ============ HERO SELECT ============ -->
+  <div id="screen-hero" class="screen hidden">
+    <div class="hero-wrap">
+      <button id="btn-hero-back" class="flow-back">← INÍCIO</button>
+      <h2 class="screen-title">ESCOLHA SEU HERÓI</h2>
+      <p class="roster-note">ELENCO JOGÁVEL DO PROTÓTIPO</p>
+      <div class="hero-grid" id="hero-grid"></div>
+      <div class="hero-detail" id="hero-detail"></div>
+      <button id="btn-hero-next" class="btn-primary">MONTAR BARALHO →</button>
+    </div>
+  </div>
+
+  <!-- ============ SAVED DECK SELECTION ============ -->
+  <div id="screen-deck" class="screen hidden"></div>
+
+  <!-- ============ MATCH INTRO ============ -->
+  <div id="screen-intro" class="screen hidden">
+    <div class="intro-center">
+      <div id="intro-title" class="intro-title"></div>
+      <div class="intro-sub">PREPARE-SE PARA A BATALHA</div>
+    </div>
+  </div>
+
+  <!-- ============ HUD ============ -->
+  <div id="hud" class="hidden">
+    <div id="crosshair">
+      <div class="ch-line ch-h"></div>
+      <div class="ch-line ch-v"></div>
+      <div id="hitmarker"></div>
+    </div>
+    <div id="hit-flash"></div>
+
+    <div id="hud-top-left">
+      <div class="score-box">
+        <div class="score-team"><span id="score-team-0" class="team-0">0</span> — <span id="score-team-1" class="team-1">0</span></div>
+        <div id="score-labels"><span class="score-label sl-ally">SEU TIME</span><span class="score-label sl-enemy">TIME RIVAL</span></div>
+        <div id="obj-label" class="obj-label">CONTROLE O PONTO</div>
+        <div id="obj-bar" class="obj-bar"><div id="obj-fill"></div></div>
+      </div>
+    </div>
+
+    <div id="hud-top-right">
+      <div id="killfeed"></div>
+      <div class="koban-row"><span class="koban-icon">⛩</span> <span id="hud-koban">0</span></div>
+      <div id="shop-hint" class="shop-hint hidden">Pressione B para abrir a loja (no spawn)</div>
+    </div>
+
+    <div id="hud-bottom-left">
+      <div class="hero-name"><span id="hud-hero"></span> <span id="hud-role"></span></div>
+      <div class="bar hp-bar"><div id="hp-fill"></div><span id="hp-text"></span></div>
+      <div class="bar res-bar"><div id="res-fill"></div><span id="res-text"></span></div>
+      <div id="hud-deck" class="hud-deck"></div>
+    </div>
+
+    <div id="hud-bottom-right">
+      <div class="weapon-name" id="hud-weapon"></div>
+      <div class="ammo" id="hud-ammo"></div>
+      <div class="abilities" id="hud-abilities"></div>
+    </div>
+
+    <div id="hud-center-top" class="hud-center-top">
+      <div id="round-timer">10:00</div>
+      <div id="announcer" class="announcer"></div>
+    </div>
+  </div>
+
+  <!-- ============ SHOP ============ -->
+  <div id="screen-shop" class="screen hidden">
+    <div class="shop-wrap">
+      <h2 class="screen-title">LOJA DO CLÃ <span class="koban-big">⛩ <span id="shop-koban">0</span></span></h2>
+      <p class="shop-note">Passivas da partida · Máximo de 4 itens · Recompra para melhorar · Venda por 50%</p>
+      <div class="shop-grid" id="shop-grid"></div>
+      <div class="shop-footer">
+        <div id="shop-owned" class="shop-owned"></div>
+        <button id="btn-shop-close" class="btn-secondary">FECHAR LOJA (B)</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ SCOREBOARD ============ -->
+  <div id="screen-scoreboard" class="screen hidden">
+    <div class="scoreboard-wrap">
+      <h2 class="screen-title">PLACAR</h2>
+      <div id="scoreboard-body"></div>
+      <div class="scoreboard-foot">SOLTE TAB PARA FECHAR</div>
+    </div>
+  </div>
+
+  <!-- ============ END SCREEN ============ -->
+  <div id="screen-end" class="screen hidden">
+    <div class="end-wrap">
+      <div id="end-result" class="end-result">VITÓRIA</div>
+      <div id="end-score" class="end-score"></div>
+      <div id="end-stats" class="end-stats"></div>
+      <div id="end-xp" class="end-xp"></div>
+      <button id="btn-end-menu" class="btn-primary">VOLTAR AO MENU</button>
+    </div>
+  </div>
+
+  <!-- ============ HELP ============ -->
+  <div id="screen-help" class="screen hidden">
+    <div class="help-wrap">
+      <h2 class="screen-title">CONTROLES</h2>
+      <table class="help-table">
+        <tr><td>Mover</td><td>W A S D</td></tr>
+        <tr><td>Correr</td><td>SHIFT (andando)</td></tr>
+        <tr><td>Pular / Pulo duplo</td><td>ESPAÇO</td></tr>
+        <tr><td>Deslizar</td><td>CTRL (andando)</td></tr>
+        <tr><td>Atirar</td><td>Clique Esquerdo</td></tr>
+        <tr><td>Ataque corpo a corpo</td><td>V</td></tr>
+        <tr><td>Habilidades</td><td>Q · Botão direito · F</td></tr>
+        <tr><td>Ultimate</td><td>E</td></tr>
+        <tr><td>Loja da partida</td><td>B (perto do spawn)</td></tr>
+        <tr><td>Placar</td><td>TAB (segurar)</td></tr>
+        <tr><td>Ajuda</td><td>H</td></tr>
+      </table>
+      <button id="btn-help-close" class="btn-secondary">FECHAR</button>
+    </div>
+  </div>
+
+  <script type="module" src="/src/main.ts"></script>
+</body>
+</html>

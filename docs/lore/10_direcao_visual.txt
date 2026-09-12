@@ -1,0 +1,112 @@
+# 30. DIREÇÃO VISUAL
+
+## Paleta-base
+
+A identidade geral utiliza:
+
+**preto + vermelho + cinza**
+
+com cores adicionais específicas para personagens:
+
+- azul/ciano;
+- roxo;
+- magenta;
+- outras cores quando justificadas.
+
+---
+
+## Elementos visuais recorrentes
+
+- chuva;
+- noite;
+- lua;
+- névoa;
+- sangue;
+- neon;
+- ruínas;
+- templos;
+- torii;
+- castelos;
+- máscaras;
+- talismãs;
+- katana;
+- armaduras;
+- tecnologia;
+- criaturas gigantes;
+- concreto;
+- metal;
+- madeira tradicional.
+
+---
+# 31. ESTÉTICA DOS PERSONAGENS
+
+Os personagens devem possuir **silhuetas distintas**.
+
+Não basta trocar:
+
+- cabelo;
+- cor;
+- roupa.
+
+Cada personagem deve possuir uma combinação própria de:
+
+- corpo;
+- postura;
+- roupas;
+- arma;
+- cor;
+- acessórios;
+- símbolos;
+- equipamento;
+- manifestação de poder.
+
+---
+# 32. REFERÊNCIA VISUAL
+
+A linguagem desejada combina:
+
+**anime sobrenatural de ação + dark fantasy + horror + cyberpunk + estética japonesa.**
+
+Pode haver:
+
+- lineart forte;
+- cel shading;
+- rostos angulares;
+- anatomia dinâmica;
+- iluminação cinematográfica;
+- efeitos de energia;
+- enquadramentos dramáticos.
+
+Mas LIN0 deve possuir **identidade própria**.
+
+Referências externas servem para linguagem visual, não para copiar personagens.
+
+---
+# 33. DIREÇÃO PARA IMAGENS
+
+Priorizar:
+
+- anatomia correta;
+- mãos corretas;
+- armas reconhecíveis;
+- silhuetas fortes;
+- composição cinematográfica;
+- iluminação coerente;
+- detalhes limpos;
+- contraste;
+- atmosfera;
+- design consistente.
+
+Evitar:
+
+- membros extras;
+- anatomia quebrada;
+- armas deformadas;
+- texto aleatório;
+- símbolos sem função;
+- objetos flutuantes sem propósito;
+- excesso de ruído;
+- aparência genérica de cyberpunk;
+- cópia de personagens existentes.
+
+---

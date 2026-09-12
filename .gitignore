@@ -1,0 +1,15 @@
+node_modules/
+dist/
+artifacts/
+coverage/
+*.log
+.DS_Store
+Thumbs.db
+.env
+.env.*
+!.env.example
+.codex/
+graphify-out/
+.organization-snapshot.json
+.reorganize.mjs
+.finish-organization.mjs

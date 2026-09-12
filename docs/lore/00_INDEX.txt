@@ -1,0 +1,23 @@
+LIN0 — ÍNDICE DA LORE
+
+Regra fundamental:
+Informações explicitamente estabelecidas pelo autor são CANON CONFIRMADO.
+Conceitos identificados como provisórios permanecem hipóteses e não devem ser tratados como fatos.
+
+Use apenas os arquivos relevantes para a tarefa atual.
+
+- 01_projeto_e_mundo.txt — Identidade do projeto, mundo, cidade e sobrenatural
+- 02_lino_personagem.txt — Perfil, aparência e identidade de Lino
+- 03_lino_demonio_e_arco.txt — Demônio de Lino, perda de controle e evolução
+- 04_lino_poderes_e_foice.txt — Poder de Lino, construções e foice
+- 05_kira.txt — KIRA
+- 06_kage.txt — KAGE
+- 07_kagari.txt — Kagari, homem dentro da máscara e ideologia
+- 08_sistema_de_poder.txt — Filosofia e variedade de poderes
+- 09_temas_e_filosofia.txt — Temas da obra e filosofia de LIN0
+- 10_direcao_visual.txt — Direção visual, estética e direção para imagens
+- 11_canon_e_continuidade.txt — Não-canon, canon confirmado e princípios de continuidade/criação
+- 12_estado_atual_do_projeto.txt — Estado atual do projeto e núcleo de LIN0
+
+Fonte original: LIN0.txt
+Os arquivos temáticos preservam o conteúdo original; apenas foram separados por assunto.

@@ -1,0 +1,105 @@
+.lino-menu.screen { display: flex; flex-direction: column; align-items: stretch; justify-content: flex-start; padding: 0 2.2vw; color: var(--lino-text); background: linear-gradient(90deg, #06060ce0 0%, #080a1244 35%, #080a120a 57%, #08090bb3 100%), linear-gradient(0deg, #050509e8, transparent 33%, transparent 75%, #06070bbb); backdrop-filter: none; font-family: 'Arial Narrow', 'Segoe UI', sans-serif; }
+.lino-menu button { font: inherit; color: inherit; cursor: pointer; }
+.lino-menu button:focus-visible, .flow-back:focus-visible { outline: 2px solid #fff; outline-offset: 5px; }
+.lino-menu svg { width: 24px; height: 24px; flex-shrink: 0; }
+.lino-topbar { height: clamp(78px, 9vh, 106px); display: flex; align-items: center; gap: 2vw; border-bottom: 1px solid #ffffff20; flex-shrink: 0; }
+.lino-logo { border: 0; background: transparent; font-size: clamp(43px, 4.2vw, 78px) !important; font-style: italic !important; font-weight: 950 !important; line-height: .9 !important; letter-spacing: -5px; transform: skew(-7deg); text-shadow: 2px 2px #292a33; min-width: 130px; text-align: left; }
+.lino-logo > span { color: var(--lino-red); }
+.lino-logo small { display: block; letter-spacing: 3px; font: 8px 'Segoe UI', sans-serif; margin-top: 10px; color: #b4b5bf; }
+.lino-topnav { display: flex; align-self: stretch; gap: 1.4vw; align-items: stretch; }
+.lino-topnav button { position: relative; border: 0; background: transparent; font-size: clamp(10px, .95vw, 17px); letter-spacing: .5px; white-space: nowrap; padding: 0 6px; color: #bbbdc9; }
+.lino-topnav button:hover, .lino-topnav button[aria-current] { color: var(--lino-red); text-shadow: 0 0 20px #ff354780; }
+.lino-topnav button[aria-current]::after { content: ''; position: absolute; bottom: 0; height: 2px; background: var(--lino-red); left: -5px; right: -5px; box-shadow: 0 0 12px #ff3547; }
+.status-dot { display: inline-block; width: 5px; height: 5px; margin: 0 0 6px 5px; border-radius: 50%; background: var(--lino-red); box-shadow: 0 0 10px #ff3547; }
+.lino-account { display: flex; align-items: center; gap: 1vw; margin-left: auto; }
+.lino-profile { display: flex; gap: 10px; align-items: center; border: 0; border-right: 1px solid #ffffff26; padding: 0 14px 0 0; background: transparent; text-align: left; }
+.profile-avatar { width: 46px; height: 48px; border: 1px solid #aaaab9; border-bottom: 3px solid var(--lino-red); background: linear-gradient(130deg, #64303a, #131721 60%); display: grid; place-content: center; font-weight: 800; font-style: italic; font-size: 24px; position: relative; }
+.profile-avatar span { position: absolute; right: 3px; bottom: 0; color: var(--lino-red); }
+.lino-profile b { font-size: 12px; display: block; max-width: 95px; overflow: hidden; text-overflow: ellipsis; }
+.lino-profile small { display: block; color: #979baa; font-size: 9px; margin: 4px 0; }
+.profile-progress { display: block; height: 2px; width: 84px; background: linear-gradient(90deg, #d7d7df 30%, #62636e 30%); }
+.lino-wallet { display: flex; gap: 15px; font-size: 12px; font-weight: 700; }
+.lino-wallet i { color: #4b96ff; font-size: 21px; font-style: normal; margin-right: 4px; }
+.lino-wallet span + span i { color: #f5c653; }
+.lino-utilities { display: flex; gap: 8px; }
+.lino-utilities button { display: grid; place-content: center; background: #0a0a1480; border: 1px solid #ffffff30; width: 36px; height: 38px; }
+.lino-utilities button:hover { background: #ff354733; border-color: var(--lino-red); }
+.lino-home { position: relative; flex: 1; min-height: 0; display: grid; grid-template-columns: 27% 1fr 25%; gap: 3%; padding: 4vh 0 2vh; }
+.lino-left { display: flex; flex-direction: column; justify-content: space-between; gap: 20px; min-height: 0; }
+.lino-mainnav { display: flex; flex-direction: column; align-items: flex-start; gap: clamp(3px, .65vh, 9px); }
+.lino-play { width: 100%; display: flex; align-items: center; justify-content: space-between; padding: 14px 24px; background: linear-gradient(110deg, #7f172677, #110e1799); border: 1px solid var(--lino-red); border-left: 5px solid var(--lino-red); transform: skew(-10deg); box-shadow: -5px 0 35px #ff354724; margin: 0 0 12px 0; text-align: left; }
+.lino-play span, .lino-play svg { transform: skew(10deg); }
+.lino-play b { font-size: clamp(32px, 3vw, 60px); font-weight: 950; font-style: italic; line-height: 1; letter-spacing: -1px; }
+.lino-play small { display: block; font-size: clamp(8px, .72vw, 12px); margin-top: 6px; color: #b8aeb7; letter-spacing: .5px; }
+.lino-play svg { color: var(--lino-red); height: 38px; width: 38px; }
+.lino-play:hover { background: linear-gradient(110deg, #b9213ab0, #41151da0); box-shadow: 0 0 35px #ff35473b; }
+.lino-navlink { border: 0; background: transparent; font-size: clamp(19px, 2vw, 38px) !important; line-height: 1.2 !important; font-weight: 850 !important; font-style: italic !important; padding: 0 0 0 18px; white-space: nowrap; text-shadow: 0 2px 8px #000; transition: transform .15s, color .15s; }
+.lino-navlink:hover, .lino-navlink:focus-visible { color: var(--lino-red); transform: translateX(8px); }
+.lino-navlink small { display: inline-block; vertical-align: middle; padding: 3px 5px; margin-left: 10px; color: #141114; background: #e9bd59; font: 700 8px 'Segoe UI', sans-serif; text-shadow: none; }
+.lino-training { border: 1px solid #ffffff27; border-left: 2px solid #a4a9bc; background: #11121b80; margin: 12px 0 0 14px; padding: 10px 13px; font-size: clamp(9px, .8vw, 13px) !important; letter-spacing: 1px; text-align: left; }
+.lino-training > span { color: var(--lino-red); margin-right: 6px; }
+.lino-training small { display: block; font-size: 8px; color: #9499aa; letter-spacing: 1px; margin: 4px 0 0 24px; }
+.lino-training:hover { border-color: var(--lino-red); }
+.lino-news { grid-column: 3; display: flex; flex-direction: column; gap: 13px; min-height: 0; }
+.news-heading { display: flex; justify-content: space-between; font-size: 9px; letter-spacing: 2px; color: #a2a6b7; }
+.lino-card { position: relative; width: 100%; min-height: 95px; border: 1px solid #ffffff47; background: #172033; text-align: left; overflow: hidden; padding: 0; isolation: isolate; }
+.lino-card::before { content: ''; position: absolute; inset: 0; z-index: -2; background: var(--card-image) center / cover no-repeat; transition: transform .4s; }
+.lino-card::after { content: ''; position: absolute; inset: 0; z-index: -1; background: linear-gradient(0deg, #080a10f5, #080a1033 75%); }
+.lino-card:hover { border-color: var(--lino-red); }
+.lino-card:hover::before { transform: scale(1.05); }
+.card-large { height: 33vh; max-height: 340px; }
+.card-medium { height: 20vh; max-height: 220px; }
+.card-small { height: 14vh; max-height: 150px; }
+.lino-card-copy { position: absolute; left: 16px; bottom: 14px; right: 30px; display: flex; flex-direction: column; gap: 4px; }
+.lino-card-copy small { font-size: clamp(8px, .7vw, 12px); color: #b9bfd0; letter-spacing: .5px; }
+.lino-card-copy b { font-size: clamp(17px, 1.55vw, 28px); font-weight: 850; font-style: italic; letter-spacing: -.5px; line-height: 1.06; }
+.lino-card-copy > span { font-size: clamp(8px, .68vw, 12px); color: #b1b3c0; }
+.lino-card > svg { position: absolute; right: 10px; bottom: 23px; }
+.card-art-label { position: absolute; top: 9px; right: 9px; background: #080a1088; padding: 3px 5px; color: #c2c5cf; font-size: 7px; letter-spacing: 1px; }
+.lino-map { height: 17vh; max-height: 185px; min-height: 100px; flex-shrink: 0; }
+.lino-hero-caption { position: absolute; bottom: 3.5vh; left: 36%; width: 31%; padding: 12px 15px; border-left: 2px solid #ff354755; background: linear-gradient(90deg, #090a1488, transparent); }
+.hero-tag { font-size: 8px; color: #999cad; letter-spacing: 2px; }
+.lino-hero-caption > div { display: flex; align-items: center; gap: 6px; margin-top: 7px; }
+.lino-hero-caption > div > span { flex: 1; }
+.lino-hero-caption b { display: block; font-size: 25px; font-weight: 850; font-style: italic; letter-spacing: 3px; }
+.lino-hero-caption small { display: block; font-size: 7px; letter-spacing: 1px; color: #b2a5af; margin-top: 3px; }
+.lino-hero-caption button { border: 1px solid #ffffff25; background: #12121d80; height: 28px; width: 28px; font-size: 22px; }
+.lino-hero-caption button:hover { border-color: var(--lino-red); }
+.lino-hero-caption button[aria-pressed="false"] { opacity: .5; }
+.lino-hero-caption svg { height: 15px; width: 15px; }
+.lino-motto { position: absolute; right: 0; bottom: 2vh; text-align: right; color: #c0b5bd88; font-size: 22px; letter-spacing: 3px; }
+.lino-motto small { display: block; font-size: 8px; letter-spacing: 4px; margin-top: 7px; }
+.lino-bottom { height: 48px; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #ffffff1a; font-size: 10px; letter-spacing: .5px; flex-shrink: 0; }
+.lino-bottom > div { display: flex; gap: 22px; align-items: center; }
+.lino-bottom button { background: none; border: 0; }
+.lino-bottom kbd { border: 1px solid #ffffff45; padding: 5px 7px; margin-right: 6px; border-radius: 2px; font: 10px 'Segoe UI', sans-serif; }
+.local-status { color: #9da1af; font-size: 8px; letter-spacing: 2px; }
+.local-status i { display: inline-block; width: 5px; height: 5px; background: #9ca6b4; border-radius: 50%; margin-right: 5px; }
+.local-status > span { margin: 0 9px; }
+.lino-dialog { margin: auto; width: min(720px, 92vw); max-height: 88vh; overflow-y: auto; border: 1px solid #ffffff35; border-top: 2px solid var(--lino-red); padding: 36px; background: linear-gradient(135deg, #1a1a27, #0c0e17); color: #eeedf1; box-shadow: 0 25px 100px #000; }
+.lino-dialog::backdrop { background: #04060bc7; backdrop-filter: blur(8px); }
+.dialog-close { position: absolute; right: 12px; top: 8px; background: none; border: 0; font-size: 28px !important; color: #c0c1cb; }
+.dialog-label { color: var(--lino-red); letter-spacing: 3px; font-size: 10px; margin: 5px 0 12px; }
+.lino-dialog h2 { font-size: 32px; font-style: italic; text-transform: uppercase; margin-bottom: 16px; }
+.lino-dialog h3 { font-size: 10px; letter-spacing: 2px; color: #c1a7b0; margin: 20px 0 10px; }
+.lino-dialog section > p, .lino-dialog form > p { line-height: 1.7; color: #b6b8c6; font-size: 14px; }
+.lino-dialog .dialog-note { font-size: 11px; margin-top: 16px; }
+
+
+.lino-dialog .btn-primary { border-radius: 0; font-size: 13px; letter-spacing: 2px; }
+.preview-state { min-height: 145px; margin-top: 25px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; border: 1px dashed #ffffff20; background: repeating-linear-gradient(135deg, #ffffff02 0 10px, transparent 10px 20px); }
+.preview-state > span { font-weight: 900; font-style: italic; font-size: 40px; letter-spacing: -3px; color: #65636e; }
+.preview-state > span > span { color: #9c3949; }
+.preview-state small { color: #8d8999; font-size: 9px; letter-spacing: 2px; text-align: center; }
+.menu-setting { display: flex; justify-content: space-between; align-items: center; gap: 25px; padding: 20px 0; border-bottom: 1px solid #ffffff15; }
+.menu-setting small { display: block; font-size: 11px; color: #979bad; margin-top: 8px; }
+.menu-setting input { width: 20px; height: 20px; accent-color: var(--lino-red); flex-shrink: 0; }
+#menu-profile-form > label { display: block; font-size: 10px; letter-spacing: 2px; margin: 20px 0 10px; }
+#menu-profile-name { display: block; width: 100%; padding: 12px; border: 1px solid #ffffff33; background: #080a13; color: white; font: inherit; user-select: text; margin-bottom: 16px; }
+.flow-back { position: absolute; left: 28px; top: 22px; color: #c4bcc7; border: 1px solid #ffffff30; padding: 10px 18px; background: #11121b; cursor: pointer; letter-spacing: 2px; }
+.roster-note { font-size: 10px; letter-spacing: 3px; color: #aaa5b4; margin-bottom: 16px; }
+.menu-reduced-motion .lino-menu *, .menu-reduced-motion .lino-menu *::before { transition: none !important; animation: none !important; }
+@media (max-width: 1450px) { .lino-wallet { display: none; } .lino-topbar { gap: 1.4vw; } .lino-topnav { gap: 1vw; } .lino-logo { min-width: 120px; } }
+@media (max-width: 1100px) { .lino-topbar { flex-wrap: wrap; height: 110px; gap: 0; align-content: space-around; } .lino-topnav { order: 3; width: 100%; height: 36px; gap: 25px; } .lino-topnav button { font-size: 11px; } .lino-logo { font-size: 42px !important; } .lino-logo small { margin-top: 3px; font-size: 6px; } .lino-profile { padding-right: 8px; } .profile-avatar { height: 35px; width: 34px; } .lino-home { grid-template-columns: 31% 1fr 28%; padding-top: 20px; gap: 2%; } .lino-navlink { font-size: 20px !important; padding-left: 8px; } .lino-play { padding: 13px; } .lino-play b { font-size: 34px; } .lino-navlink small { margin-left: 4px; font-size: 6px; } .lino-training { margin-left: 0; letter-spacing: 0; } .lino-hero-caption { left: 35%; width: 31%; } .lino-card-copy { left: 10px; } .lino-motto { font-size: 16px; } }
+@media (max-height: 760px) and (min-width: 761px) { .lino-home { padding-top: 16px; } .lino-mainnav { gap: 3px; } .lino-navlink { font-size: 22px !important; } .lino-play { padding: 10px 16px; margin-bottom: 7px; } .lino-play b { font-size: 36px; } .lino-training { margin-top: 5px; padding: 7px 10px; } .lino-map { height: 13vh; min-height: 85px; } .lino-news { gap: 9px; } .card-large { height: 29vh; } .card-medium { height: 19vh; } .card-small { height: 14vh; } .lino-card-copy > span { display: none; } .lino-bottom { height: 38px; } }
+@media (max-width: 760px) { .lino-menu.screen { overflow-y: auto; padding: 0 18px; } .lino-topbar { min-height: 112px; } .lino-profile > span + span, .lino-wallet, .lino-utilities button:first-child { display: none; } .lino-topnav { gap: 6px; justify-content: space-between; overflow-x: auto; } .lino-topnav button { font-size: 9px; padding: 0 2px; } .lino-home { display: flex; flex-direction: column; flex: none; gap: 24px; min-height: 850px; } .lino-left { width: 65%; gap: 20px; } .lino-mainnav { gap: 8px; } .lino-navlink { font-size: 23px !important; } .lino-play { padding: 14px; } .lino-training { font-size: 10px !important; } .lino-map { height: 130px; } .lino-news { display: grid; grid-template-columns: 1fr 1fr; width: 100%; gap: 10px; } .news-heading { grid-column: 1/-1; } .lino-card { min-height: 125px; height: auto; } .card-large { grid-column: 1/-1; height: 175px; } .lino-hero-caption { left: auto; right: 0; top: 470px; bottom: auto; width: 31%; padding: 10px 5px; } .lino-hero-caption > div { flex-wrap: wrap; } .lino-hero-caption > div > span { flex-basis: 100%; } .hero-tag { font-size: 6px; letter-spacing: 1px; } .lino-hero-caption small { font-size: 6px; } .lino-motto { display: none; } .lino-bottom { font-size: 8px; min-height: 48px; } .lino-bottom > div { gap: 10px; } .local-status { font-size: 6px; letter-spacing: 0; } .local-status > span { margin: 0 2px; } .lino-dialog { padding: 28px 20px; } .lino-dialog h2 { font-size: 25px; }  }
