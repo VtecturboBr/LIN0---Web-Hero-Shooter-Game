@@ -1,15 +1,62 @@
-# LIN0 — Hero shooter
+# LIN0 — Web Hero Shooter
 
-Protótipo em primeira pessoa feito com **TypeScript, Three.js e Vite**. Inclui partidas locais 5v5 com bots, Conquista, Duelo Shogun, galeria de seis personagens, baralhos personalizados e campo de treinamento.
+**Escolha seu herói. Monte seu baralho. Controle o campo de batalha.**
 
-## Executar
+Hero shooter em primeira pessoa para navegador, desenvolvido com **TypeScript, Three.js e Vite**. Um protótipo jogável com partidas locais **5v5 contra bots**, habilidades próprias por personagem, mapas tridimensionais e personalização por cartas.
+
+[Começar](#executar-localmente) · [Imagens](#imagens-do-projeto) · [Controles](#jogar) · [Documentação](#documentação) · [Reportar problema](https://github.com/VtecturboBr/LIN0---Web-Hero-Shooter-Game/issues)
+
+![Menu principal de LIN0 com personagem em 3D, cenário noturno e acesso ao jogo e à galeria](docs/images/menu-desktop.png)
+
+> **Em desenvolvimento.** O jogo funciona localmente, sem servidor de partidas. As capturas mostram versões de desenvolvimento; modelos, interface e balanceamento podem diferir do código publicado. Modo online, cosméticos, passe de batalha e serviços sociais ainda não estão implementados.
+
+## O que você encontra
+
+- **Combate 5v5 com bots:** habilidades, supremas, projéteis, efeitos de status e loja de itens durante a partida.
+- **Seis personagens:** Lino, Yume, Raijin, Kitsune, Shin e Kenji, com galeria, habilidades e cartas próprias.
+- **Lino, o Arquiteto do Abismo:** foice, estruturas destrutíveis, fio de movimentação e dash para controlar espaço e mobilidade.
+- **Dois modos:** Conquista, com disputa de ponto, e Duelo Shogun, com pontuação por eliminações.
+- **Mapas e treinamento:** Distrito Shōtō, Castelo do Shogun e um campo para testar dano, cura e movimentação.
+- **Baralhos personalizados:** 20 opções de cartas por personagem, nove espaços de baralho e cinco cartas por combinação.
+- **Persistência local:** baralhos e preferências ficam salvos no navegador.
+
+## Imagens do projeto
+
+### Combate no Distrito Shōtō
+
+Perspectiva em primeira pessoa com a foice de Lino, ponto de captura e indicadores de combate.
+
+![Lino em primeira pessoa na praça do Distrito Shōtō, com foice e ponto de captura ao centro](docs/images/shoto-first-person.png)
+
+### Personalização por cartas
+
+Cada baralho combina cinco cartas diferentes, com níveis de 1 a 5 e um total de 15 pontos.
+
+![Editor de baralho de Lino com cinco cartas ilustradas, níveis ajustáveis e distribuição de 15 pontos](docs/images/loadouts-editor-desktop.png)
+
+## Executar localmente
+
+Tenha **Node.js 22 LTS com npm**, Git e um navegador desktop com WebGL. Use teclado e mouse para jogar.
+
+Clone o repositório e instale as dependências:
 
 ```bash
-npm install
+git clone https://github.com/VtecturboBr/LIN0---Web-Hero-Shooter-Game.git
+cd LIN0---Web-Hero-Shooter-Game
+npm ci
 npm run dev
 ```
 
-Abra o endereço informado pelo Vite. Para gerar a versão de distribuição, execute `npm run build`; o resultado fica em `dist/`. `npm run preview` serve essa versão.
+Abra o endereço informado pelo Vite, normalmente `http://localhost:5173`. Entre em uma partida ou no campo de treinamento; clique na área do jogo para capturar o mouse.
+
+Para gerar e conferir a versão de distribuição:
+
+```bash
+npm run build
+npm run preview
+```
+
+O build verifica os tipos TypeScript e gera os arquivos estáticos em `dist/`. Abra o endereço exibido pelo comando de preview.
 
 ## Onde encontrar cada coisa
 
@@ -54,7 +101,7 @@ Os mapas de partida são Distrito Shōtō e Castelo do Shogun. O **campo de trei
 | Pausa / placar / loja da partida | Esc / segurar Tab / B nas áreas permitidas |
 | Treinamento: painel / recuperar / reiniciar | T / G / N |
 
-Baralhos e preferências são salvos no navegador. A reorganização dos arquivos preserva os IDs dos personagens, cartas e mapas e a chave `lino.loadouts.v1`.
+Baralhos e preferências são salvos neste navegador. Limpar os dados do site remove esses dados locais.
 
 ## Verificar alterações
 
@@ -64,10 +111,23 @@ npm run test:lino        # Kit de Lino
 npm run test:map         # Colisão, navegação e captura
 npm run test:combat      # Disparos, projéteis e registro de acertos
 npm run test:loadouts    # Cartas, níveis, salvamento e migração
+npm run typecheck        # Verificação de tipos sem gerar o build
 npm run build            # TypeScript e distribuição
 npm run test:browser     # Fluxo de partida no Chrome; requer Vite rodando
 ```
 
 Veja [os testes no navegador](tests/README.md) para validar galeria, portraits, treinamento e outros fluxos. As capturas são gravadas em `artifacts/browser/`, ignorado pelo controle de versão. `dist/` também é gerado; ambos podem ser recriados.
 
-O projeto ainda usa geometria procedural e modelos provisórios. O modo online, cosméticos, passe de batalha e serviços sociais não estão implementados.
+## Documentação
+
+- [Organização do projeto](docs/structure.md): onde alterar personagens, habilidades, cartas, mapas e menus.
+- [Combate e ferramentas de desenvolvimento](docs/runtime-and-dev-mode.md): eventos, status e painel acessível por F3.
+- [Distrito Shōtō](docs/shoto-map.md): estrutura e decisões do mapa.
+- [Testes](tests/README.md): suítes de simulação e verificações no Chrome.
+- [Recursos visuais](public/assets/README.md): organização das imagens utilizadas pelo jogo.
+
+## Contribuir
+
+Abra uma [issue](https://github.com/VtecturboBr/LIN0---Web-Hero-Shooter-Game/issues) com passos para reproduzir o problema, resultado esperado e navegador utilizado. Capturas ajudam em problemas visuais.
+
+Para alterações de código, consulte o guia de organização, mantenha o escopo focado e execute os testes relevantes e `npm run build`. Mudanças de interface também devem ser conferidas no navegador.
